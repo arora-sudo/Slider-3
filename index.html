@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>OWL CAROUSEL MADE ON jQUERY/BOOOTSTRAP/CSS</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css'>
+
+<style>
+
+body {
+  font-family: "Heebo", sans-serif;
+  font-size: 16px;
+  margin:0;
+  padding:0;
+  background-color:black;
+}
+
+img {
+  max-width: 100%;
+  border: 0px;
+}
+h2 {
+	
+  padding-bottom: 25px;
+  font-size: 25px;
+  color:white;
+  line-height: 28px;
+  font-weight: 700;
+  position: relative;
+  text-transform: capitalize;
+}
+h3 {
+  margin-bottom:10px;
+  font-size: 28px;
+  line-height: 36px;
+  font-family:raleway;
+}
+
+.b {
+  position: relative;
+  width: 600px;
+  margin:0 auto;
+  text-align:center;
+  bottom:25px;
+}
+
+.b::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+   width: 100%;
+  border-radius: 2px;
+}
+
+.b::after {
+  
+  background-color: #e73700;
+}
+
+
+.a {
+  padding: 60px 50px;
+}
+.a .owl-stage {
+  margin: 15px 0;
+  display: flex;
+ 
+}
+.a .item {
+  margin: 0 15px 60px;
+  width: 320px;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-size:cover;
+  background-image: #343434;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.a .item.active {
+  width: 500px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+.a .item:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+.a .c {
+  padding: 0 24px 12px 24px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+}
+.a .item.active .c {
+  transform: none;
+ 
+}
+.a .c p {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: all 0.4s ease-in-out 0.2s;
+}
+.a .item.active .c p {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  h2 {
+    margin-bottom: 32px;
+  }
+  h3 {
+    margin-bottom:8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .b {
+    width: 330px;
+  }
+
+  
+  .a {
+    padding: 50px 30px 40px;
+  }
+  .a .item {
+    margin: 0 12px 60px;
+    width: 240px;
+    height: 330px;
+  }
+  .a .item.active {
+    width: 360px;
+  }
+  .a .c {
+    transform: translateY(calc(100% - 42px));
+
+  }
+}
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  h2 {
+    margin-bottom: 20px;
+	font-size:16px;
+  }
+  h3 {
+    margin-bottom:8px;
+    font-size: 19px;
+    line-height: 24px;
+  }
+  .b {
+    width: 250px;
+  }
+
+  .a {
+    padding: 30px 15px 20px 15px;
+  }
+  .a .item {
+    margin: 0 10px 40px 10px;
+    width: 200px;
+    height: 280px;
+  }
+  .a .item.active {
+    width: 270px;
+    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+   
+  }
+  .a .c {
+    padding: 0 14px 5px 14px;
+    transform: translateY(calc(100% - 42px));
+    
+  }
+}
+</style>
+</head>
+<body>
+<section class="a">
+  <h2 class="b">OWL CAROUSEL MADE ON HTML/CSS/jQUERY</h2>
+  <div class="owl-carousel g owl-theme">
+    <div class="item active" style="background-image: url(images-slide/1.jpg);">
+      <div class="c">
+        <h3>IMAGE 1</h3>
+        <p>Image 1 of owl carousel</p>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(images-slide/2.jpg);">
+      <div class="c">
+        <h3>IMAGE 2</h3>
+        <p>Image 2 of owl carousel</p>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(images-slide/3.jpg);">
+      <div class="c">
+        <h3>IMAGE 3</h3>
+        <p>Image 3 of owl carousel</p>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(images-slide/4.jpg);">
+      <div class="c">
+         <h3>IMAGE 4</h3>
+        <p>Image 4 of owl carousel</p>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(images-slide/5.jpg);">
+      <div class="c">
+       <h3>IMAGE 5</h3>
+        <p>Image 5 of owl carousel</p>
+      </div>
+    </div>
+    <div class="item" style="background-image: url(images-slide/6.jpg);">
+      <div class="c">
+        <h3>IMAGE 6</h3>
+        <p>Image 6 of owl carousel</p>
+      </div>
+    </div>
+	<div class="item" style="background-image: url(images-slide/7.jpg);">
+      <div class="c">
+        <h3>IMAGE 7</h3>
+        <p>Image 7 of owl carousel</p>
+      </div>
+    </div>
+	<div class="item" style="background-image: url(images-slide/8.jpg);">
+      <div class="c">
+        <h3>IMAGE 8</h3>
+        <p>Image 8 of owl carousel</p>
+      </div>
+    </div>
+	<div class="item" style="background-image: url(images-slide/9.jpg);">
+      <div class="c">
+        <h3>IMAGE 9</h3>
+        <p>Image 9 of owl carousel</p>
+      </div>
+    </div>
+	<div class="item" style="background-image: url(images-slide/10.jpg);">
+      <div class="c">
+        <h3>IMAGE 10</h3>
+        <p>Image 10 of owl carousel</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'></script>
+<script  src="script.js"></script>
+
+</body>
+</html>
